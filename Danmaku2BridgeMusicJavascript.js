@@ -17,7 +17,7 @@ Danmaku2BridgeMusicJavascript = ((function () {
 			if (musicDictionary[musicName])
 				continue;
 						
-			var musicPath = "Data/Audio/" + musicName;
+			var musicPath = "Data/Audio/" + musicName + "?doNotCache=" + Date.now().toString();
 			
 			var audio = new Audio(musicPath);
 			audio.addEventListener("canplaythrough", function () {
