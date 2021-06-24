@@ -19,7 +19,7 @@ Danmaku2BridgeSoundsJavascript = ((function () {
 			
 			soundDictionary[soundName] = [];
 			
-			var soundPath = "Data/Audio/" + soundName;
+			var soundPath = "Data/Audio/" + soundName + "?doNotCache=" + Date.now().toString();
 			for (var j = 0; j < 10; j++) {
 				var audio = new Audio(soundPath);
 				audio.addEventListener("canplaythrough", function () {
